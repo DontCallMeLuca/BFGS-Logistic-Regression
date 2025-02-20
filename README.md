@@ -191,16 +191,24 @@ The model uses line search to approximate stationary points of the log-likelihoo
 The step lengths will be chosen to satisfy the Wolfe conditions.
 
 #### Problem Definition
-$\text{Find } \alpha > 0 \text{ satisfying:}$
 
-$\phi(\alpha) \leq \phi(0) + c_1\alpha\phi'(0)$ (Armijo condition)  
-$\phi'(\alpha) \geq c_2\phi'(0)$ (Curvature condition)
+**Find $\alpha > 0$ satisfying:**
 
-where:
-- $\phi: \mathbb{R} \rightarrow \mathbb{R}$ is continuously differentiable
-- $\phi'(0) < 0$
-- $0 < c_1 < c_2 < 1$
-- $\alpha_1 > 0$ (initial step length)
+```math
+\phi(\alpha) \leq \phi(0) + c_1\alpha\phi'(0)
+\phi'(\alpha) \geq c_2\phi'(0)
+```
+
+**Where:**
+
+```math
+\begin{alignat*}{2}
+&\phi: \mathbb{R} \rightarrow \mathbb{R}\text{ is continuously differentiable}\\
+&\phi'(0) < 0\\
+&0 < c_1 < c_2 < 1\\
+&\alpha_1 > 0
+\end{alignat*}
+```
 
 #### Algorithm Formulation
 
