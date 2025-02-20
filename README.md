@@ -203,7 +203,7 @@ The step lengths will be chosen to satisfy the Wolfe conditions.
 
 ```math
 \begin{alignat*}{2}
-&\phi: \mathbb{R} \rightarrow \mathbb{R}\text{ is continuously differentiable}\\
+&\phi: \mathbb{R} \to \mathbb{R}, \quad \phi \in C^1(\mathbb{R})
 &\phi'(0) < 0\\
 &0 < c_1 < c_2 < 1\\
 &\alpha_1 > 0
