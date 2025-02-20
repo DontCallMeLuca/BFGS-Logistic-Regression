@@ -203,24 +203,25 @@ where:
 
 #### Algorithm Formulation
 
-**Initialize:**
-$\alpha_0 = 0$
-$k = 1$
-$L = 0$
-$U = \infty$
-
-**While** $\phi(\alpha_k) > \phi(0) + c_1\alpha_k\phi'(0)$ **or** $\phi'(\alpha_k) < c_2\phi'(0)$ **do:**
-
-**If** $\phi(\alpha_k) > \phi(0) + c_1\alpha_k\phi'(0)$ **or** $\phi'(\alpha_k) \geq 0$ **or** $\phi(\alpha_k) \geq \phi(\alpha_{k-1})$ **then:**
-- $U \leftarrow \alpha_k \text{ if } \phi'(\alpha_k) \geq 0; \text{ otherwise } L \leftarrow \alpha_k$
-- $\alpha_{k+1} \leftarrow \begin{cases} 2\alpha_k & \text{if } U = \infty \\ \frac{1}{2}(L + U) & \text{otherwise} \end{cases}$
-
-**Else:**
-- $\alpha_{k+1} \leftarrow 2\alpha_k$
-
-$k \leftarrow k + 1$
-
-**Return:** $\alpha_k$
+```math
+\begin{alignat*}{2}
+& \alpha_0 = 0\\
+& k = 1\\
+& L = 0\\
+& U = \infty\\
+& \text{while }\phi(\alpha_k) > \phi(0) + c_1\alpha_k\phi'(0)\text{ or }\phi'(\alpha_k) < c_2\phi'(0)\text{ do}\\
+& \text{if }\phi(\alpha_k) > \phi(0) + c_1\alpha_k\phi'(0)\text{ or }\phi'(\alpha_k) \geq 0\text{ or }\phi(\alpha_k) \geq \phi(\alpha_{k-1})\text{ then}\\
+& \quad U \leftarrow \alpha_k\text{ if }\phi'(\alpha_k) \geq 0;\text{ otherwise }L \leftarrow \alpha_k\\
+& \quad \alpha_{k+1} \leftarrow \begin{cases}
+2\alpha_k & \text{if }U = \infty\\
+\frac{1}{2}(L + U) & \text{otherwise}
+\end{cases}\\
+& \text{else}\\
+& \quad \alpha_{k+1} \leftarrow 2\alpha_k\\
+& k \leftarrow k + 1\\
+& \text{return }\alpha_k
+\end{alignat*}
+```
 
 ### Predictions
 Using the `logitic_regression(X, y)` function, we can estimate the values of $w_0$ and $w$.
@@ -295,7 +296,7 @@ The trained weights should look something like this:
   1.18261077e+00 -2.63848633e-01]
 ```
 
-With an accuracy around $80\%$, which is all we can ask for with such a small dataset.
+With an accuracy around 80%, which is all we can ask for with such a small dataset.
 
 ## 📃 License
 This project uses the `GNU GENERAL PUBLIC LICENSE v3.0` license
