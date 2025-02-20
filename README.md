@@ -86,7 +86,7 @@ Because we are trying to predict the binary variable $y_i$, we introduce the sig
 \phi:\mathbb{R}\rightarrow(0,1)
 ```
 
-- When $t \leq 0$, then $\phi(t)$ is nearly $0$, and if $t \geq 0$, then $\phi(t)$ is close to $1$.
+When $t \leq 0$, then $\phi(t)$ is nearly $0$, and if $t \geq 0$, then $\phi(t)$ is close to $1$.
 This function is therefore suitable to convert some underlying variable to a survival probability.
 Besides, this function has the useful properties:
 
