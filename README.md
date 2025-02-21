@@ -162,7 +162,7 @@ To this end, not that the gradient of the log-likelihood is:
 \end{align}
 ```
 
-It can be shown that $\phi'(t)=\phi(t)[1-\phi(t)]$, which implies taht the Hessian of the log-likelihood is:
+It can be shown that $\phi'(t)=\phi(t)[1-\phi(t)]$, which implies that the Hessian of the log-likelihood is:
 
 ```math
 \nabla^2f(w_0,w) = -\sum_{i=1}^{N}\phi(w_0 + w^Tx_i)[1-\phi(w_0+w^Tx_i)]
